@@ -13,5 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
   }
 `;
