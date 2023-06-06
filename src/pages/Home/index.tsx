@@ -3,10 +3,10 @@ import { TopBar } from '../../components/TopBar'
 import { Outlet } from 'react-router-dom'
 
 export const Home = () => {
-    return (
-        <Container>
-            <TopBar />
-            <Outlet />
-        </Container>
-    )
+  return (
+    <Container>
+      <TopBar />
+      <Outlet />
+    </Container>
+  )
 }

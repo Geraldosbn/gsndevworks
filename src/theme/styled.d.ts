@@ -7,5 +7,11 @@ declare module 'styled-components' {
       text: string;
       background: string;
     };
+    fontSize: {
+      small: string;
+      medium: string;
+      large: string;
+      bigLarge: string;
+    };
   }
 }
