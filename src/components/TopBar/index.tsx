@@ -17,6 +17,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaSun,
+  FaProjectDiagram,
 } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
@@ -44,25 +45,29 @@ export const TopBar = () => {
       label: (
         <FaInfoCircle style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
-      to: '/about',
+      to: '/',
       hoverText: 'About',
+    },
+    {
+      label: (
+        <FaProjectDiagram style={{ backgroundColor: ' #1d2941' }} size={size} />
+      ),
+      hoverText: 'Projects',
     },
     {
       label: (
         <FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
-      to: '/resume',
+      to: '/Resume',
       hoverText: 'Resume',
     },
     {
       label: <FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />,
-      to: '/contact',
       link: 'https://www.linkedin.com/in/geraldo-b-a50629146/',
       hoverText: 'LinkedIn',
     },
     {
       label: <FaGithub style={{ backgroundColor: ' #1d2941' }} size={size} />,
-      to: '/resume',
       link: 'https://github.com/geraldosbn',
       hoverText: 'GitHub',
     },
@@ -70,7 +75,6 @@ export const TopBar = () => {
       label: (
         <FaWhatsappSquare style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
-      to: '/resume',
       link: 'https://wa.me/5527999235310?text=Ol%C3%A1%2C+dei+uma+olhada+no+seu+portf%C3%B3lio+e+achei+incr%C3%ADvel%21',
       hoverText: 'Whatsapp',
     },
@@ -91,8 +95,6 @@ export const TopBar = () => {
       setOpen(true)
     }
   }
-
-  console.log(size)
 
   return (
     <Container>
