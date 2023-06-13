@@ -8223,6 +8223,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-jsx-runtime@^1.0.0-alpha.1:
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/react-jsx-runtime/-/react-jsx-runtime-1.0.0-alpha.1.tgz#9b9529ac5d87eb460b5f96a9dd9451773b892550"
+  integrity sha512-xFNkPolRLBQxasX2UrOI+f7zqES8d4V6WXzaR/bZ39x2xhpuI01etl5Vy2G7FFE+gQcjcRZqICtXf/gvHOY/vg==
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"

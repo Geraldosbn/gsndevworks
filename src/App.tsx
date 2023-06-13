@@ -1,6 +1,6 @@
-import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyle } from './theme/theme';
-import AppRoutes from './Routes';
+import { ThemeProvider } from 'styled-components'
+import { theme, GlobalStyle } from './theme/theme'
+import AppRoutes from './Routes'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <GlobalStyle />
       <AppRoutes />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
