@@ -46,20 +46,20 @@ export const TopBar = () => {
         <FaInfoCircle style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       to: '/',
-      hoverText: 'About',
+      hoverText: 'Sobre mim',
     },
     {
       label: (
         <FaProjectDiagram style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
-      hoverText: 'Projects',
+      hoverText: 'Projetos',
     },
     {
       label: (
         <FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       to: '/Resume',
-      hoverText: 'Resume',
+      hoverText: 'Curriculo',
     },
     {
       label: <FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />,

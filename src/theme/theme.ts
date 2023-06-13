@@ -7,7 +7,7 @@ export const theme: DefaultTheme = {
     background: '#2d3442',
   },
   fontSize: {
-    smaler: '12px',
+    smaler: '14px',
     small: '16px',
     medium: '24px',
     large: '32px',
