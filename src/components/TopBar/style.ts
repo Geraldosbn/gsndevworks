@@ -21,6 +21,9 @@ export const Container = styled.div`
   background-color: #1d2941;
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primaryText}`};
 
+  @media screen and (min-width: 768px) {
+    height: 180px;
+  }
   @media screen and (min-width: 1024px) {
     height: 200px;
   }
@@ -50,7 +53,6 @@ export const MsgDarkMode = styled.p`
     right: 45px;
   }
 `
-
 export const ContainerHeader = styled.div`
   display: flex;
   flex-direction: column;
@@ -76,7 +78,6 @@ export const Title = styled.p`
     font-size: ${({ theme }) => theme.fontSize.large};
   }
 `
-
 export const ContainerSubTitle = styled.div`
   display: flex;
   justify-content: center;
@@ -84,13 +85,11 @@ export const ContainerSubTitle = styled.div`
   width: 90%;
   background-color: inherit;
 `
-
 export const SubTitle = styled.p`
   color: ${({ theme }) => theme.colors.primaryText};
   font-size: ${({ theme }) => theme.fontSize.small};
   background-color: inherit;
 `
-
 export const ContainerNav = styled.div`
   display: flex;
   justify-content: space-evenly;

@@ -6,7 +6,7 @@ const About = () => {
     <ContainerApp>
       <Container>
         <CardContainer>
-          <Title>Sobre Mim</Title>
+          <Title>Olá,</Title>
           <Content>
             Sou um desenvolvedor Front-end focado no ecossistema
             {<WordBold> React JS, TypeScript, React Query.</WordBold>} Minha

@@ -1,9 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-interface DivProps {
-  icon?: string
-}
-
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -36,7 +32,7 @@ export const CardContainer = styled.div`
   color: ${({ theme }) => theme.colors.secondaryText};
   padding: 20px;
   border-radius: 8px;
-  width: 90%;
+  width: 95%;
   margin-bottom: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `
@@ -69,26 +65,17 @@ export const ContainerIcons = styled.div`
   background: transparent;
   height: 150px;
   padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    height: 110px;
+  }
 `
 
-const switchPosition = (icon?: string) => {
-  switch (icon) {
-    case 'React':
-      return { botton: '-20px', right: '5px' }
-    case 'Query':
-      return { botton: '-20px', right: '-16px' }
-    case 'SComponents':
-      return { botton: '-40px', right: '-25px' }
-    case 'Typescript':
-      return { botton: '-25px', right: '-10px' }
-    case 'Redux':
-      return { botton: '-25px', right: '5px' }
-    default:
-      return { botton: '-20px', right: '0px' }
-  }
-}
-
-export const ContentIcon = styled.div<DivProps>`
+export const ContentIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
   background: transparent;
   position: relative;
@@ -96,10 +83,9 @@ export const ContentIcon = styled.div<DivProps>`
   p {
     display: none;
     position: absolute;
-    bottom: ${props => switchPosition(props.icon).botton};
-    right: ${props => switchPosition(props.icon).right};
+    bottom: -30px;
     background-color: transparent;
-    width: ${props => (props.icon === 'Query' ? 'max-content' : 'auto')};
+    width: max-content;
     font-size: ${({ theme }) => theme.fontSize.small};
     animation: ${fadeIn} 0.3s ease-in-out forwards;
   }
@@ -112,4 +98,3 @@ export const ContentIcon = styled.div<DivProps>`
     animation: ${rotate} 1s linear infinite;
   }
 `
-

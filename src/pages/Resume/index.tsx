@@ -24,7 +24,7 @@ const Resume = () => {
   useEffect(() => {
     const handleResize = () => {
       const widthScreen = window.innerWidth
-      widthScreen >= 1024 ? setSize(80) : setSize(50)
+      widthScreen >= 768 ? setSize(80) : setSize(50)
     }
 
     handleResize()
@@ -65,28 +65,28 @@ const Resume = () => {
       <CardContainer>
         <Title>Habilidades</Title>
         <ContainerIcons>
-          <ContentIcon icon='React'>
+          <ContentIcon>
             <SiReact style={{ backgroundColor: ' #475166' }} size={size} />
             <p>React</p>
           </ContentIcon>
-          <ContentIcon icon='Typescript'>
+          <ContentIcon>
             <SiTypescript style={{ backgroundColor: ' #475166' }} size={size} />
             <p>Typescript</p>
           </ContentIcon>
-          <ContentIcon icon='Query'>
+          <ContentIcon>
             <SiReactquery style={{ backgroundColor: ' #475166' }} size={size} />
-            <p>React query</p>
+            <p>React Query</p>
           </ContentIcon>
-          <ContentIcon icon='Redux'>
+          <ContentIcon>
             <SiRedux style={{ backgroundColor: ' #475166' }} size={size} />
             <p>Redux</p>
           </ContentIcon>
-          <ContentIcon icon='SComponents'>
+          <ContentIcon>
             <SiStyledcomponents
               style={{ backgroundColor: ' #475166' }}
               size={size}
             />
-            <p>Styled components</p>
+            <p>S. Components</p>
           </ContentIcon>
         </ContainerIcons>
       </CardContainer>
@@ -97,8 +97,8 @@ const Resume = () => {
     return (
       <CardContainer>
         <Title>Formação Acadêmica</Title>
-        <Content>Senac - Centro universitário Santo Amaro</Content>
-        <Content>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS 2020-2022</Content>
+        <Span>Senac - Centro universitário Santo Amaro</Span>
+        <Content>Análise e desenvolvimento de sistemas 2020-2022</Content>
       </CardContainer>
     )
   }

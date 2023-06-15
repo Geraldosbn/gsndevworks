@@ -27,6 +27,7 @@ export const ContainerBtn = styled.div`
     background-color: transparent;
     font-size: ${({ theme }) => theme.fontSize.smaler};
     animation: ${fadeIn} 0.3s ease-in-out forwards;
+    width: max-content;
   }
 
   &:hover p {

@@ -30,7 +30,7 @@ export const TopBar = () => {
   useEffect(() => {
     const handleResize = () => {
       const widthScreen = window.innerWidth
-      widthScreen >= 1024 ? setSize(30) : setSize(20)
+      widthScreen >= 768 ? setSize(30) : setSize(20)
     }
 
     handleResize()
