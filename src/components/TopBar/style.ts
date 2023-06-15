@@ -66,6 +66,7 @@ export const ContainerTitle = styled.div`
   align-items: center;
   width: 90%;
   background-color: inherit;
+  cursor: pointer;
 `
 export const Title = styled.p`
   font-size: ${({ theme }) => theme.fontSize.medium};

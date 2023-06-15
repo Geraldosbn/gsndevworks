@@ -20,10 +20,12 @@ import {
   FaProjectDiagram,
 } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const TopBar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [size, setSize] = useState<number>(20)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,13 +47,14 @@ export const TopBar = () => {
       label: (
         <FaInfoCircle style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
-      to: '/',
+      to: '/About',
       hoverText: 'Sobre mim',
     },
     {
       label: (
         <FaProjectDiagram style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
+      to: '/Projects',
       hoverText: 'Projetos',
     },
     {
@@ -120,7 +123,7 @@ export const TopBar = () => {
             </MsgDarkMode>
           )}
         </ContainerTools>
-        <ContainerTitle>
+        <ContainerTitle onClick={() => navigate('/Home')}>
           <Title>{'<GeraldoBarbosa />'}</Title>
         </ContainerTitle>
         <ContainerSubTitle>

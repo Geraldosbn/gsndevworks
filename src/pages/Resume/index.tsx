@@ -16,7 +16,9 @@ import {
   SiStyledcomponents,
   SiTypescript,
 } from 'react-icons/si'
-export const Resume = () => {
+import { ContainerApp } from '../../components/container'
+
+const Resume = () => {
   const [size, setSize] = useState<number>(20)
 
   useEffect(() => {
@@ -101,10 +103,14 @@ export const Resume = () => {
     )
   }
   return (
-    <Container>
-      <XpCard />
-      <SkillsCard />
-      <EducationCard />
-    </Container>
+    <ContainerApp>
+      <Container>
+        <XpCard />
+        <SkillsCard />
+        <EducationCard />
+      </Container>
+    </ContainerApp>
   )
 }
+
+export default Resume

@@ -1,12 +1,11 @@
 import { Container } from './style'
-import { TopBar } from '../../components/TopBar'
-import { Outlet } from 'react-router-dom'
+import { ContainerApp } from '../../components/container'
 
-export const Home = () => {
+const Home = () => {
   return (
-    <Container>
-      <TopBar />
-      <Outlet />
-    </Container>
+    <ContainerApp>
+      <Container>HOME HERE</Container>
+    </ContainerApp>
   )
 }
+export default Home
