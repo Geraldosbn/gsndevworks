@@ -123,7 +123,7 @@ export const TopBar = () => {
             </MsgDarkMode>
           )}
         </ContainerTools>
-        <ContainerTitle onClick={() => navigate('/Home')}>
+        <ContainerTitle onClick={() => navigate('/')}>
           <Title>{'<GeraldoBarbosa />'}</Title>
         </ContainerTitle>
         <ContainerSubTitle>
