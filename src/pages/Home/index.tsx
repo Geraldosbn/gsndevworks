@@ -1,11 +1,11 @@
 import { Container } from './style'
-import { ContainerApp } from '../../components/container'
+import ContainerMain from './../../components/containerMain/index'
 
 const Home = () => {
   return (
-    <ContainerApp>
+    <ContainerMain>
       <Container>HOME HERE</Container>
-    </ContainerApp>
+    </ContainerMain>
   )
 }
 export default Home

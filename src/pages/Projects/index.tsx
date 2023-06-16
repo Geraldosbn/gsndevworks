@@ -1,11 +1,11 @@
-import { ContainerApp } from '../../components/container'
 import { Container } from './style'
+import ContainerMain from './../../components/containerMain/index'
 
 const Projects = () => {
   return (
-    <ContainerApp>
+    <ContainerMain>
       <Container>Projects HERE.</Container>
-    </ContainerApp>
+    </ContainerMain>
   )
 }
 export default Projects

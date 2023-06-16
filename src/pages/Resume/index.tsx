@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import {
-  CardContainer,
   Company,
   Container,
   ContainerIcons,
@@ -16,7 +15,8 @@ import {
   SiStyledcomponents,
   SiTypescript,
 } from 'react-icons/si'
-import { ContainerApp } from '../../components/container'
+import ContainerMain from './../../components/containerMain/index'
+import Card from '../../components/card'
 
 const Resume = () => {
   const [size, setSize] = useState<number>(20)
@@ -37,7 +37,7 @@ const Resume = () => {
   }, [])
   const XpCard = () => {
     return (
-      <CardContainer>
+      <Card>
         <Title>Expereciência</Title>
         <Company>Evologica Tecnologia e Pesquisa.</Company>
         <Span>Estagiário de Front-end 08/22 - 02/23</Span>
@@ -56,13 +56,13 @@ const Resume = () => {
           Typescript, tanto na manutenção de sistemas legados quanto no
           desenvolvimento de novos projetos.
         </Content>
-      </CardContainer>
+      </Card>
     )
   }
 
   const SkillsCard = () => {
     return (
-      <CardContainer>
+      <Card>
         <Title>Habilidades</Title>
         <ContainerIcons>
           <ContentIcon>
@@ -89,27 +89,27 @@ const Resume = () => {
             <p>S. Components</p>
           </ContentIcon>
         </ContainerIcons>
-      </CardContainer>
+      </Card>
     )
   }
 
   const EducationCard = () => {
     return (
-      <CardContainer>
+      <Card>
         <Title>Formação Acadêmica</Title>
         <Span>Senac - Centro universitário Santo Amaro</Span>
         <Content>Análise e desenvolvimento de sistemas 2020-2022</Content>
-      </CardContainer>
+      </Card>
     )
   }
   return (
-    <ContainerApp>
+    <ContainerMain>
       <Container>
         <XpCard />
         <SkillsCard />
         <EducationCard />
       </Container>
-    </ContainerApp>
+    </ContainerMain>
   )
 }
 
