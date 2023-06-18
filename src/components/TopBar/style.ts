@@ -17,7 +17,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 165px;
+  height: 170px;
   background-color: #1d2941;
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primaryText}`};
 
@@ -96,6 +96,7 @@ export const ContainerNav = styled.div`
   align-items: center;
   width: 100%;
   margin: 10px;
+
   background-color: inherit;
 
   @media screen and (min-width: 768px) {

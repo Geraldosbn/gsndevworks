@@ -1,13 +1,5 @@
 import { useEffect, useState } from 'react'
-import {
-  Company,
-  Container,
-  ContainerIcons,
-  Content,
-  ContentIcon,
-  Span,
-  Title,
-} from './style'
+import { Company, ContainerIcons, Content, Span, Title } from './style'
 import {
   SiReact,
   SiReactquery,
@@ -17,6 +9,12 @@ import {
 } from 'react-icons/si'
 import ContainerMain from './../../components/containerMain/index'
 import Card from '../../components/card'
+import { CardIcon } from '../../components/cardIcon'
+
+interface Icon {
+  label: string
+  icon: JSX.Element
+}
 
 const Resume = () => {
   const [size, setSize] = useState<number>(20)
@@ -35,59 +33,81 @@ const Resume = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
   const XpCard = () => {
     return (
       <Card>
-        <Title>Expereciência</Title>
+        <Title>Experiências</Title>
         <Company>Evologica Tecnologia e Pesquisa.</Company>
         <Span>Estagiário de Front-end 08/22 - 02/23</Span>
         <Content>
-          Desenvolvimento web utilizando: ReactJS com TS, Styled Components,
-          Redux e realizando o consumo de API usando framework próprio 'Curió'.
+          <Span>Ferramentas:</Span> ReactJS com TS, Styled Components, Redux e
+          realizando o consumo de API usando framework próprio 'Curió'.
         </Content>
         <Content>
-          A Evológica é uma empresa de desenvolvimento de software que possui
-          uma ampla gama de projetos. Esses projetos abrangem desde soluções que
-          atendem milhares de vendedores e clientes até iniciativas para grandes
-          empresas e programas de televisão.
+          A <Span>Evológica</Span> é uma empresa de desenvolvimento de software
+          que possui uma ampla gama de projetos. Esses projetos abrangem desde
+          soluções que atendem milhares de vendedores e clientes até iniciativas
+          para grandes empresas e programas de televisão.
         </Content>
         <Content>
-          Competências: Meu foco principal é no desenvolvimento web com React e
-          Typescript, tanto na manutenção de sistemas legados quanto no
-          desenvolvimento de novos projetos.
+          <Span>Competências:</Span> Meu foco principal é no desenvolvimento web
+          com React e Typescript, tanto na manutenção de sistemas legados quanto
+          no desenvolvimento de novos projetos.
         </Content>
       </Card>
     )
   }
 
   const SkillsCard = () => {
+    const icons: Icon[] = [
+      {
+        label: 'React',
+        icon: (
+          <SiReact style={{ backgroundColor: 'transparent' }} size={size} />
+        ),
+      },
+      {
+        label: 'Typescript',
+        icon: (
+          <SiTypescript
+            size={size}
+            style={{ backgroundColor: 'transparent' }}
+          />
+        ),
+      },
+      {
+        label: 'React Query',
+        icon: (
+          <SiReactquery
+            size={size}
+            style={{ backgroundColor: 'transparent' }}
+          />
+        ),
+      },
+      {
+        label: 'Redux',
+        icon: (
+          <SiRedux size={size} style={{ backgroundColor: 'transparent' }} />
+        ),
+      },
+      {
+        label: 'S. Components',
+        icon: (
+          <SiStyledcomponents
+            size={size}
+            style={{ backgroundColor: 'transparent' }}
+          />
+        ),
+      },
+    ]
     return (
       <Card>
         <Title>Habilidades</Title>
         <ContainerIcons>
-          <ContentIcon>
-            <SiReact style={{ backgroundColor: ' #475166' }} size={size} />
-            <p>React</p>
-          </ContentIcon>
-          <ContentIcon>
-            <SiTypescript style={{ backgroundColor: ' #475166' }} size={size} />
-            <p>Typescript</p>
-          </ContentIcon>
-          <ContentIcon>
-            <SiReactquery style={{ backgroundColor: ' #475166' }} size={size} />
-            <p>React Query</p>
-          </ContentIcon>
-          <ContentIcon>
-            <SiRedux style={{ backgroundColor: ' #475166' }} size={size} />
-            <p>Redux</p>
-          </ContentIcon>
-          <ContentIcon>
-            <SiStyledcomponents
-              style={{ backgroundColor: ' #475166' }}
-              size={size}
-            />
-            <p>S. Components</p>
-          </ContentIcon>
+          {icons.map(({ icon, label }) => (
+            <CardIcon label={label} icon={icon} />
+          ))}
         </ContainerIcons>
       </Card>
     )
@@ -104,11 +124,9 @@ const Resume = () => {
   }
   return (
     <ContainerMain>
-      <Container>
-        <XpCard />
-        <SkillsCard />
-        <EducationCard />
-      </Container>
+      <SkillsCard />
+      <XpCard />
+      <EducationCard />
     </ContainerMain>
   )
 }

@@ -1,31 +1,5 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
 export const CardContainer = styled.div`
   background-color: #475166;
   color: ${({ theme }) => theme.colors.secondaryText};
@@ -67,33 +41,5 @@ export const ContainerIcons = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 110px;
-  }
-`
-
-export const ContentIcon = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-  background: transparent;
-  position: relative;
-
-  p {
-    display: none;
-    position: absolute;
-    bottom: -30px;
-    background-color: transparent;
-    width: max-content;
-    font-size: ${({ theme }) => theme.fontSize.small};
-    animation: ${fadeIn} 0.3s ease-in-out forwards;
-  }
-
-  &:hover p {
-    display: block;
-  }
-
-  &:hover svg {
-    animation: ${rotate} 1s linear infinite;
   }
 `

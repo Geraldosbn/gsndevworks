@@ -1,14 +1,15 @@
 import styled, { keyframes } from 'styled-components'
-import { ButtonProps } from './index'
+import { ButtonProps } from '.'
 
 const fadeIn = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-1);
+
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-10px);
   }
 `
 
@@ -23,11 +24,15 @@ export const ContainerBtn = styled.div`
   p {
     display: none;
     position: absolute;
-    bottom: -20px;
+    bottom: 0;
     background-color: transparent;
     font-size: ${({ theme }) => theme.fontSize.smaler};
-    animation: ${fadeIn} 0.3s ease-in-out forwards;
+    animation: ${fadeIn} 0.1s ease-in-out forwards;
     width: max-content;
+
+    @media screen and (min-width: 768px) {
+      bottom: 10px;
+    }
   }
 
   &:hover p {

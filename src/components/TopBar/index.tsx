@@ -9,7 +9,7 @@ import {
   SubTitle,
   Title,
 } from './style'
-import { Button } from '../Button'
+import { Button } from '../button'
 import {
   FaInfoCircle,
   FaPaperclip,
