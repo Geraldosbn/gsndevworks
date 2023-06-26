@@ -4,7 +4,7 @@ import ContainerMain from './../../components/containerMain/index'
 const Home = () => {
   return (
     <ContainerMain>
-      <Container>HOME HER!E</Container>
+      <Container>HOME HERE!</Container>
     </ContainerMain>
   )
 }
