@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { CenterContainer, Container } from './style'
+import * as S from './style'
 import TopBar from '../TopBar'
 
 interface ContainerAppProps {
@@ -10,9 +10,9 @@ const ContainerMain = ({ children }: ContainerAppProps) => {
   return (
     <>
       <TopBar />
-      <Container>
-        <CenterContainer>{children}</CenterContainer>
-      </Container>
+      <S.Container>
+        <S.CenterContainer>{children}</S.CenterContainer>
+      </S.Container>
     </>
   )
 }

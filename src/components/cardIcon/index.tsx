@@ -1,4 +1,4 @@
-import { ContentIcon } from './styled'
+import * as S from './styled'
 
 export interface CardIconProps {
   icon: React.ReactNode
@@ -7,10 +7,10 @@ export interface CardIconProps {
 
 const CardIcon = ({ icon, label }: CardIconProps) => {
   return (
-    <ContentIcon>
+    <S.ContentIcon>
       {icon}
       {label && <p>{label}</p>}
-    </ContentIcon>
+    </S.ContentIcon>
   )
 }
 export default CardIcon

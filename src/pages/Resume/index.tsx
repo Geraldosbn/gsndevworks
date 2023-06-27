@@ -1,17 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Company, ContainerIcons, Content, Span, Title } from './style'
-import {
-  SiReact,
-  SiReactquery,
-  SiRedux,
-  SiStyledcomponents,
-  SiTypescript,
-} from 'react-icons/si'
-import ContainerMain from './../../components/containerMain/index'
-import Card from '../../components/card'
-import CardIcon from '../../components/cardIcon'
+import * as S from './style'
+import * as Icon from 'react-icons/si'
+import ContainerMain from '../../components/ContainerMain/index'
+import Card from '../../components/Card'
+import CardIcon from '../../components/CardIcon'
 
-interface Icon {
+interface IconProps {
   label: string
   icon: JSX.Element
 }
@@ -37,40 +31,43 @@ const Resume = () => {
   const XpCard = () => {
     return (
       <Card>
-        <Title>Experiências</Title>
-        <Company>Evologica Tecnologia e Pesquisa.</Company>
-        <Span>Estagiário de Front-end 08/22 - 02/23</Span>
-        <Content>
-          <Span>Ferramentas:</Span> ReactJS com TS, Styled Components, Redux e
-          realizando o consumo de API usando framework próprio 'Curió'.
-        </Content>
-        <Content>
-          A <Span>Evológica</Span> é uma empresa de desenvolvimento de software
-          que possui uma ampla gama de projetos. Esses projetos abrangem desde
-          soluções que atendem milhares de vendedores e clientes até iniciativas
-          para grandes empresas e programas de televisão.
-        </Content>
-        <Content>
-          <Span>Competências:</Span> Meu foco principal é no desenvolvimento web
-          com React e Typescript, tanto na manutenção de sistemas legados quanto
-          no desenvolvimento de novos projetos.
-        </Content>
+        <S.Title>Experiências</S.Title>
+        <S.Company>Evologica Tecnologia e Pesquisa.</S.Company>
+        <S.Span>Estagiário de Front-end 08/22 - 02/23</S.Span>
+        <S.Content>
+          <S.Span>Ferramentas:</S.Span> ReactJS com TS, Styled Components, Redux
+          e realizando o consumo de API usando framework próprio 'Curió'.
+        </S.Content>
+        <S.Content>
+          A <S.Span>Evológica</S.Span> é uma empresa de desenvolvimento de
+          software que possui uma ampla gama de projetos. Esses projetos
+          abrangem desde soluções que atendem milhares de vendedores e clientes
+          até iniciativas para grandes empresas e programas de televisão.
+        </S.Content>
+        <S.Content>
+          <S.Span>Competências:</S.Span> Meu foco principal é no desenvolvimento
+          web com React e Typescript, tanto na manutenção de sistemas legados
+          quanto no desenvolvimento de novos projetos.
+        </S.Content>
       </Card>
     )
   }
 
   const SkillsCard = () => {
-    const icons: Icon[] = [
+    const icons: IconProps[] = [
       {
         label: 'React',
         icon: (
-          <SiReact style={{ backgroundColor: 'transparent' }} size={size} />
+          <Icon.SiReact
+            style={{ backgroundColor: 'transparent' }}
+            size={size}
+          />
         ),
       },
       {
         label: 'Typescript',
         icon: (
-          <SiTypescript
+          <Icon.SiTypescript
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
@@ -79,7 +76,7 @@ const Resume = () => {
       {
         label: 'React Query',
         icon: (
-          <SiReactquery
+          <Icon.SiReactquery
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
@@ -88,13 +85,16 @@ const Resume = () => {
       {
         label: 'Redux',
         icon: (
-          <SiRedux size={size} style={{ backgroundColor: 'transparent' }} />
+          <Icon.SiRedux
+            size={size}
+            style={{ backgroundColor: 'transparent' }}
+          />
         ),
       },
       {
         label: 'S. Components',
         icon: (
-          <SiStyledcomponents
+          <Icon.SiStyledcomponents
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
@@ -103,12 +103,12 @@ const Resume = () => {
     ]
     return (
       <Card>
-        <Title>Habilidades</Title>
-        <ContainerIcons>
+        <S.Title>Habilidades</S.Title>
+        <S.ContainerIcons>
           {icons.map(({ icon, label }) => (
             <CardIcon label={label} icon={icon} />
           ))}
-        </ContainerIcons>
+        </S.ContainerIcons>
       </Card>
     )
   }
@@ -116,9 +116,9 @@ const Resume = () => {
   const EducationCard = () => {
     return (
       <Card>
-        <Title>Formação Acadêmica</Title>
-        <Span>Senac - Centro universitário Santo Amaro</Span>
-        <Content>Análise e desenvolvimento de sistemas 2020-2022</Content>
+        <S.Title>Formação Acadêmica</S.Title>
+        <S.Span>Senac - Centro universitário Santo Amaro</S.Span>
+        <S.Content>Análise e desenvolvimento de sistemas 2020-2022</S.Content>
       </Card>
     )
   }

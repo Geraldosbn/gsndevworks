@@ -1,27 +1,8 @@
-import {
-  Container,
-  ContainerHeader,
-  ContainerNav,
-  ContainerSubTitle,
-  ContainerTitle,
-  ContainerTools,
-  MsgDarkMode,
-  SubTitle,
-  Title,
-} from './style'
-
-import {
-  FaInfoCircle,
-  FaPaperclip,
-  FaWhatsappSquare,
-  FaLinkedin,
-  FaGithub,
-  FaSun,
-  FaProjectDiagram,
-} from 'react-icons/fa'
+import * as S from './style'
+import * as Icon from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../button'
+import Button from '../Button'
 
 const TopBar = () => {
   const [open, setOpen] = useState<boolean>(false)
@@ -46,38 +27,51 @@ const TopBar = () => {
   const actions: JSX.Element[] = [
     {
       label: (
-        <FaInfoCircle style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaInfoCircle
+          style={{ backgroundColor: ' #1d2941' }}
+          size={size}
+        />
       ),
       to: '/About',
       hoverText: 'Sobre mim',
     },
     {
       label: (
-        <FaProjectDiagram style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaProjectDiagram
+          style={{ backgroundColor: ' #1d2941' }}
+          size={size}
+        />
       ),
       to: '/Projects',
       hoverText: 'Projetos',
     },
     {
       label: (
-        <FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       to: '/Resume',
       hoverText: 'Curriculo',
     },
     {
-      label: <FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />,
+      label: (
+        <Icon.FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />
+      ),
       link: 'https://www.linkedin.com/in/geraldo-b-a50629146/',
       hoverText: 'LinkedIn',
     },
     {
-      label: <FaGithub style={{ backgroundColor: ' #1d2941' }} size={size} />,
+      label: (
+        <Icon.FaGithub style={{ backgroundColor: ' #1d2941' }} size={size} />
+      ),
       link: 'https://github.com/geraldosbn',
       hoverText: 'GitHub',
     },
     {
       label: (
-        <FaWhatsappSquare style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaWhatsappSquare
+          style={{ backgroundColor: ' #1d2941' }}
+          size={size}
+        />
       ),
       link: 'https://wa.me/5527999235310?text=Ol%C3%A1%2C+dei+uma+olhada+no+seu+portf%C3%B3lio+e+achei+incr%C3%ADvel%21',
       hoverText: 'Whatsapp',
@@ -101,12 +95,12 @@ const TopBar = () => {
   }
 
   return (
-    <Container>
-      <ContainerHeader>
-        <ContainerTools>
+    <S.Container>
+      <S.ContainerHeader>
+        <S.ContainerTools>
           <Button
             label={
-              <FaSun
+              <Icon.FaSun
                 style={{
                   backgroundColor: ' #1d2941',
                   paddingTop: 10,
@@ -118,21 +112,21 @@ const TopBar = () => {
             }
           />
           {open && (
-            <MsgDarkMode>
+            <S.MsgDarkMode>
               Ops, Não temos LightMode/DarkMode ¯\_(ツ)_/¯ ! LightMode/DarkMode
               todo mundo faz, o importante mesmo é resolver os seus problemas!
-            </MsgDarkMode>
+            </S.MsgDarkMode>
           )}
-        </ContainerTools>
-        <ContainerTitle onClick={() => navigate('/')}>
-          <Title>{'<GeraldoBarbosa />'}</Title>
-        </ContainerTitle>
-        <ContainerSubTitle>
-          <SubTitle>{'<Dev Frontend />'}</SubTitle>
-        </ContainerSubTitle>
-      </ContainerHeader>
-      <ContainerNav>{actions}</ContainerNav>
-    </Container>
+        </S.ContainerTools>
+        <S.ContainerTitle onClick={() => navigate('/')}>
+          <S.Title>{'<GeraldoBarbosa />'}</S.Title>
+        </S.ContainerTitle>
+        <S.ContainerSubTitle>
+          <S.SubTitle>{'<Dev Frontend />'}</S.SubTitle>
+        </S.ContainerSubTitle>
+      </S.ContainerHeader>
+      <S.ContainerNav>{actions}</S.ContainerNav>
+    </S.Container>
   )
 }
 export default TopBar

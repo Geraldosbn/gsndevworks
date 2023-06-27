@@ -15,7 +15,7 @@ export const theme: DefaultTheme = {
   },
 }
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{}>`
   * {
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primaryText};

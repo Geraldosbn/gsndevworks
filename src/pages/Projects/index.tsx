@@ -1,10 +1,10 @@
-import { Container } from './style'
-import ContainerMain from './../../components/containerMain/index'
+import * as S from './style'
+import ContainerMain from '../../components/ContainerMain/index'
 
 const Projects = () => {
   return (
     <ContainerMain>
-      <Container>Projects HERE.</Container>
+      <S.Container>Projects HERE.</S.Container>
     </ContainerMain>
   )
 }

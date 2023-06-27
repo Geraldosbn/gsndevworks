@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components'
-import { theme, GlobalStyle } from './theme/theme'
+import { GlobalStyle, theme } from './theme/theme'
 import AppRoutes from './Routes'
 
 function App() {

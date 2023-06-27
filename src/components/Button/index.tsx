@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { ButtonStyle, ContainerBtn } from './styled'
+import * as S from './styled'
 
 export interface ButtonProps {
   label?: React.ReactNode
@@ -13,23 +13,23 @@ const Button = ({ label, href, to, hoverText }: ButtonProps) => {
 
   if (href) {
     return (
-      <ContainerBtn>
+      <S.ContainerBtn>
         <a
           href={href}
           target='_blank'
           rel='noreferrer'
           style={{ backgroundColor: ' #1d2941' }}>
-          <ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
+          <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
         </a>
         <p>{hoverText}</p>
-      </ContainerBtn>
+      </S.ContainerBtn>
     )
   } else {
     return (
-      <ContainerBtn>
-        <ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
+      <S.ContainerBtn>
+        <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
         <p>{hoverText}</p>
-      </ContainerBtn>
+      </S.ContainerBtn>
     )
   }
 }

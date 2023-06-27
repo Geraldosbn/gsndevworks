@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
-import { Container } from './style'
+import * as S from './style'
 
 interface CardProps {
   children: ReactNode
 }
 
 const Card = ({ children }: CardProps) => {
-  return <Container>{children}</Container>
+  return <S.Container>{children}</S.Container>
 }
 export default Card
