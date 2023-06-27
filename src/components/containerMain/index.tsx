@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { CenterContainer, Container } from './style'
-import { TopBar } from '../TopBar'
+import TopBar from '../TopBar'
 
 interface ContainerAppProps {
   children: ReactNode

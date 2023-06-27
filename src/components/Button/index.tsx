@@ -8,7 +8,7 @@ export interface ButtonProps {
   hoverText?: string
 }
 
-export const Button = ({ label, href, to, hoverText }: ButtonProps) => {
+const Button = ({ label, href, to, hoverText }: ButtonProps) => {
   const navigate = useNavigate()
 
   if (href) {
@@ -33,3 +33,4 @@ export const Button = ({ label, href, to, hoverText }: ButtonProps) => {
     )
   }
 }
+export default Button

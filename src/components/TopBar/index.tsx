@@ -9,7 +9,7 @@ import {
   SubTitle,
   Title,
 } from './style'
-import { Button } from '../button'
+
 import {
   FaInfoCircle,
   FaPaperclip,
@@ -21,8 +21,9 @@ import {
 } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Button from '../button'
 
-export const TopBar = () => {
+const TopBar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [size, setSize] = useState<number>(20)
   const navigate = useNavigate()
@@ -134,3 +135,4 @@ export const TopBar = () => {
     </Container>
   )
 }
+export default TopBar

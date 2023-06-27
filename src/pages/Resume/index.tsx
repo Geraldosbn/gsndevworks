@@ -9,7 +9,7 @@ import {
 } from 'react-icons/si'
 import ContainerMain from './../../components/containerMain/index'
 import Card from '../../components/card'
-import { CardIcon } from '../../components/cardIcon'
+import CardIcon from '../../components/cardIcon'
 
 interface Icon {
   label: string
