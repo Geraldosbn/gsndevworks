@@ -1,5 +1,5 @@
-import * as S from './style'
 import { ContainerMain } from '../../components/ContainerMain/ContainerMain'
+import * as S from './style'
 
 const Home = () => {
   return (
