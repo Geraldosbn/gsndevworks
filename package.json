@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "gsndevworks",
+  "homepage": "/gsndevworks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
