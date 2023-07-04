@@ -1,6 +1,6 @@
 import * as S from './style'
-import { ContainerMain } from '../../components/ContainerMain'
-import { Card } from '../../components/Card'
+import { ContainerMain } from '../../components/ContainerMain/ContainerMain'
+import { Card } from '../../components/Card/Card'
 
 const About = () => {
   return (
