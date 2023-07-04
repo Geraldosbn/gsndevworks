@@ -2,9 +2,9 @@ import * as S from './style'
 import * as Icon from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../Button'
+import { Button } from '../Button'
 
-const TopBar = () => {
+export const TopBar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [size, setSize] = useState<number>(20)
   const navigate = useNavigate()
@@ -129,4 +129,3 @@ const TopBar = () => {
     </S.Container>
   )
 }
-export default TopBar

@@ -5,7 +5,7 @@ export interface CardIconProps {
   label?: string
 }
 
-const CardIcon = ({ icon, label }: CardIconProps) => {
+export const CardIcon = ({ icon, label }: CardIconProps) => {
   return (
     <S.ContentIcon>
       {icon}
@@ -13,4 +13,3 @@ const CardIcon = ({ icon, label }: CardIconProps) => {
     </S.ContentIcon>
   )
 }
-export default CardIcon

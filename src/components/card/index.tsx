@@ -5,7 +5,6 @@ interface CardProps {
   children: ReactNode
 }
 
-const Card = ({ children }: CardProps) => {
+export const Card = ({ children }: CardProps) => {
   return <S.Container>{children}</S.Container>
 }
-export default Card

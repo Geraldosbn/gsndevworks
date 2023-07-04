@@ -1,5 +1,5 @@
 import * as S from './style'
-import ContainerMain from '../../components/ContainerMain/index'
+import { ContainerMain } from '../../components/ContainerMain'
 
 const Home = () => {
   return (

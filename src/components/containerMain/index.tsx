@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 import * as S from './style'
-import TopBar from '../TopBar'
+import { TopBar } from '../TopBar'
 
 interface ContainerAppProps {
   children: ReactNode
 }
 
-const ContainerMain = ({ children }: ContainerAppProps) => {
+export const ContainerMain = ({ children }: ContainerAppProps) => {
   return (
     <>
       <TopBar />
@@ -16,4 +16,3 @@ const ContainerMain = ({ children }: ContainerAppProps) => {
     </>
   )
 }
-export default ContainerMain
