@@ -1,6 +1,6 @@
 import * as S from './style'
-import ContainerMain from '../../components/ContainerMain'
-import Card from '../../components/Card'
+import ContainerMain from '../../components/ContainerMain/index'
+import Card from '../../components/Card/index'
 
 export default function About() {
   return (

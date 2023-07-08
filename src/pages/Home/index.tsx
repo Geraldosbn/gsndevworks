@@ -1,4 +1,4 @@
-import ContainerMain from '../../components/ContainerMain'
+import ContainerMain from '../../components/ContainerMain/index'
 import * as S from './style'
 
 export default function Home() {
