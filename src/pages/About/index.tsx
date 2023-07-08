@@ -6,7 +6,7 @@ export default function About() {
   return (
     <ContainerMain>
       <Card>
-        <S.Title>Olá,</S.Title>
+        <S.Title>Oi,</S.Title>
         <S.Content>
           Sou um desenvolvedor Front-end focado no ecossistema
           {<S.WordBold> React JS, TypeScript, React Query.</S.WordBold>} Minha

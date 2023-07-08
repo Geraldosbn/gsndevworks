@@ -12,7 +12,7 @@ export default function TopBar() {
   useEffect(() => {
     const handleResize = () => {
       const widthScreen = window.innerWidth
-      widthScreen >= 768 ? setSize(30) : setSize(20)
+      widthScreen >= 768 ? setSize(30) : setSize(23)
     }
 
     handleResize()
@@ -103,8 +103,8 @@ export default function TopBar() {
               <Icon.FaSun
                 style={{
                   backgroundColor: ' #1d2941',
-                  paddingTop: 10,
-                  paddingRight: 10
+                  paddingTop: 15,
+                  paddingRight: 20
                 }}
                 size={size}
                 onClick={handleOpenMsgDM}
@@ -122,7 +122,7 @@ export default function TopBar() {
           <S.Title>{'<GeraldoBarbosa />'}</S.Title>
         </S.ContainerTitle>
         <S.ContainerSubTitle>
-          <S.SubTitle>{'<Dev Frontend />'}</S.SubTitle>
+          <S.SubTitle>{'<DevFrontend />'}</S.SubTitle>
         </S.ContainerSubTitle>
       </S.ContainerHeader>
       <S.ContainerNav>{actions}</S.ContainerNav>

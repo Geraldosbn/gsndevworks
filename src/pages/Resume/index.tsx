@@ -28,31 +28,6 @@ export default function Resume() {
     }
   }, [])
 
-  const XpCard = () => {
-    return (
-      <Card>
-        <S.Title>Experiências</S.Title>
-        <S.Company>Evologica Tecnologia e Pesquisa.</S.Company>
-        <S.Span>Estagiário de Front-end 08/22 - 02/23</S.Span>
-        <S.Content>
-          <S.Span>Ferramentas:</S.Span> ReactJS com TS, Styled Components, Redux
-          e realizando o consumo de API usando framework próprio 'Curió'.
-        </S.Content>
-        <S.Content>
-          A <S.Span>Evológica</S.Span> é uma empresa de desenvolvimento de
-          software que possui uma ampla gama de projetos. Esses projetos
-          abrangem desde soluções que atendem milhares de vendedores e clientes
-          até iniciativas para grandes empresas e programas de televisão.
-        </S.Content>
-        <S.Content>
-          <S.Span>Competências:</S.Span> Meu foco principal é no desenvolvimento
-          web com React e Typescript, tanto na manutenção de sistemas legados
-          quanto no desenvolvimento de novos projetos.
-        </S.Content>
-      </Card>
-    )
-  }
-
   const SkillsCard = () => {
     const icons: IconProps[] = [
       {
@@ -109,6 +84,31 @@ export default function Resume() {
             <CardIcon label={label} icon={icon} />
           ))}
         </S.ContainerIcons>
+      </Card>
+    )
+  }
+
+  const XpCard = () => {
+    return (
+      <Card>
+        <S.Title>Experiências</S.Title>
+        <S.Company>Evologica Tecnologia e Pesquisa.</S.Company>
+        <S.Span>Estagiário de Front-end 08/22 - 02/23</S.Span>
+        <S.Content>
+          <S.Span>Ferramentas:</S.Span> ReactJS com TS, Styled Components, Redux
+          e realizando o consumo de API usando framework próprio 'Curió'.
+        </S.Content>
+        <S.Content>
+          A <S.Span>Evológica</S.Span> é uma empresa de desenvolvimento de
+          software que possui uma ampla gama de projetos. Esses projetos
+          abrangem desde soluções que atendem milhares de vendedores e clientes
+          até iniciativas para grandes empresas e programas de televisão.
+        </S.Content>
+        <S.Content>
+          <S.Span>Competências:</S.Span> Meu foco principal é no desenvolvimento
+          web com React e Typescript, tanto na manutenção de sistemas legados
+          quanto no desenvolvimento de novos projetos.
+        </S.Content>
       </Card>
     )
   }

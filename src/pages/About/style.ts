@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-
-
 export const Title = styled.h2`
   color: #50bddb;
   margin-bottom: 10px;
@@ -17,4 +15,8 @@ export const WordBold = styled.span`
 export const Content = styled.p`
   margin-bottom: 10px;
   background: transparent;
+
+  @media screen and (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.small};
+  }
 `
