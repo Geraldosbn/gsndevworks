@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import * as S from './style'
 import * as Icon from 'react-icons/si'
-import ContainerMain from '../../components/ContainerMain/ContainerMain'
-import CardIcon from '../../components/CardIcon/CardIcon'
-import Card from '../../components/Card/Card'
+import ContainerMain from '../../components/ContainerMain'
+import CardIcon from '../../components/CardIcon'
+import Card from '../../components/Card'
 
 interface IconProps {
   label: string
