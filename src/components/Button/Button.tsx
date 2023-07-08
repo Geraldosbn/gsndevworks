@@ -8,7 +8,7 @@ export interface ButtonProps {
   hoverText?: string
 }
 
-export const Button = ({ label, href, to, hoverText }: ButtonProps) => {
+export default function Button({ label, href, to, hoverText }: ButtonProps) {
   const navigate = useNavigate()
 
   if (href) {
@@ -18,7 +18,8 @@ export const Button = ({ label, href, to, hoverText }: ButtonProps) => {
           href={href}
           target='_blank'
           rel='noreferrer'
-          style={{ backgroundColor: ' #1d2941' }}>
+          style={{ backgroundColor: ' #1d2941' }}
+        >
           <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
         </a>
         <p>{hoverText}</p>

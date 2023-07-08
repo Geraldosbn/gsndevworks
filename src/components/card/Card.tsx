@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
+import React from 'react'
 import * as S from './style'
 
 interface CardProps {
-  children: ReactNode
+  children: React.ReactNode
 }
 
-export const Card = ({ children }: CardProps) => {
+export default function Card({ children }: CardProps) {
   return <S.Container>{children}</S.Container>
 }

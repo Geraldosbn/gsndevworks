@@ -1,8 +1,8 @@
 import * as S from './style'
-import { ContainerMain } from '../../components/ContainerMain/ContainerMain'
-import { Card } from '../../components/Card/Card'
+import ContainerMain from '../../components/ContainerMain/ContainerMain'
+import Card from '../../components/Card/Card'
 
-const About = () => {
+export default function About() {
   return (
     <ContainerMain>
       <Card>
@@ -49,4 +49,3 @@ const About = () => {
     </ContainerMain>
   )
 }
-export default About

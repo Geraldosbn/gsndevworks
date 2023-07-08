@@ -1,10 +1,10 @@
+import { useEffect, useState } from 'react'
 import * as S from './style'
 import * as Icon from 'react-icons/fa'
-import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button } from '../Button/Button'
+import Button from '../Button/Button'
 
-export const TopBar = () => {
+export default function TopBar() {
   const [open, setOpen] = useState<boolean>(false)
   const [size, setSize] = useState<number>(20)
   const navigate = useNavigate()
@@ -33,7 +33,7 @@ export const TopBar = () => {
         />
       ),
       to: '/About',
-      hoverText: 'Sobre mim',
+      hoverText: 'Sobre mim'
     },
     {
       label: (
@@ -43,28 +43,28 @@ export const TopBar = () => {
         />
       ),
       to: '/Projects',
-      hoverText: 'Projetos',
+      hoverText: 'Projetos'
     },
     {
       label: (
         <Icon.FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       to: '/Resume',
-      hoverText: 'Curriculo',
+      hoverText: 'Curriculo'
     },
     {
       label: (
         <Icon.FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       link: 'https://www.linkedin.com/in/geraldo-b-a50629146/',
-      hoverText: 'LinkedIn',
+      hoverText: 'LinkedIn'
     },
     {
       label: (
         <Icon.FaGithub style={{ backgroundColor: ' #1d2941' }} size={size} />
       ),
       link: 'https://github.com/geraldosbn',
-      hoverText: 'GitHub',
+      hoverText: 'GitHub'
     },
     {
       label: (
@@ -74,8 +74,8 @@ export const TopBar = () => {
         />
       ),
       link: 'https://wa.me/5527999235310?text=Ol%C3%A1%2C+dei+uma+olhada+no+seu+portf%C3%B3lio+e+achei+incr%C3%ADvel%21',
-      hoverText: 'Whatsapp',
-    },
+      hoverText: 'Whatsapp'
+    }
   ].map(({ label, to, link, hoverText }, index) => (
     <Button
       key={index}
@@ -104,7 +104,7 @@ export const TopBar = () => {
                 style={{
                   backgroundColor: ' #1d2941',
                   paddingTop: 10,
-                  paddingRight: 10,
+                  paddingRight: 10
                 }}
                 size={size}
                 onClick={handleOpenMsgDM}

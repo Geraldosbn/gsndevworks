@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import * as S from './style'
 import * as Icon from 'react-icons/si'
-import { ContainerMain } from '../../components/ContainerMain/ContainerMain'
-import { CardIcon } from '../../components/CardIcon/CardIcon'
-import { Card } from '../../components/Card/Card'
+import ContainerMain from '../../components/ContainerMain/ContainerMain'
+import CardIcon from '../../components/CardIcon/CardIcon'
+import Card from '../../components/Card/Card'
 
 interface IconProps {
   label: string
   icon: JSX.Element
 }
 
-const Resume = () => {
+export default function Resume() {
   const [size, setSize] = useState<number>(20)
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const Resume = () => {
             style={{ backgroundColor: 'transparent' }}
             size={size}
           />
-        ),
+        )
       },
       {
         label: 'Typescript',
@@ -71,7 +71,7 @@ const Resume = () => {
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
-        ),
+        )
       },
       {
         label: 'React Query',
@@ -80,7 +80,7 @@ const Resume = () => {
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
-        ),
+        )
       },
       {
         label: 'Redux',
@@ -89,7 +89,7 @@ const Resume = () => {
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
-        ),
+        )
       },
       {
         label: 'S. Components',
@@ -98,8 +98,8 @@ const Resume = () => {
             size={size}
             style={{ backgroundColor: 'transparent' }}
           />
-        ),
-      },
+        )
+      }
     ]
     return (
       <Card>
@@ -130,5 +130,3 @@ const Resume = () => {
     </ContainerMain>
   )
 }
-
-export default Resume

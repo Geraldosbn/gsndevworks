@@ -1,3 +1,4 @@
+import React from 'react'
 import * as S from './styled'
 
 export interface CardIconProps {
@@ -5,7 +6,7 @@ export interface CardIconProps {
   label?: string
 }
 
-export const CardIcon = ({ icon, label }: CardIconProps) => {
+export default function CardIcon({ icon, label }: CardIconProps) {
   return (
     <S.ContentIcon>
       {icon}

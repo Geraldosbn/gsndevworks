@@ -4,9 +4,7 @@ import Resume from './pages/Resume'
 import Projects from './pages/Projects'
 import About from './pages/About'
 
-//import About from './pages/About';
-
-function AppRoutes() {
+export default function AppRoutes() {
   return (
     <Router>
       <Routes>
@@ -18,5 +16,3 @@ function AppRoutes() {
     </Router>
   )
 }
-
-export default AppRoutes

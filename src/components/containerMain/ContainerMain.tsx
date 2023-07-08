@@ -1,12 +1,12 @@
-import { ReactNode } from 'react'
+import React from 'react'
 import * as S from './style'
-import { TopBar } from '../TopBar'
+import TopBar from '../TopBar'
 
 interface ContainerAppProps {
-  children: ReactNode
+  children: React.ReactNode
 }
 
-export const ContainerMain = ({ children }: ContainerAppProps) => {
+export default function ContainerMain({ children }: ContainerAppProps) {
   return (
     <>
       <TopBar />

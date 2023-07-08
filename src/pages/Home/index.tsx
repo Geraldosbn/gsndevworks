@@ -1,11 +1,10 @@
-import { ContainerMain } from '../../components/ContainerMain/ContainerMain'
+import ContainerMain from '../../components/ContainerMain/ContainerMain'
 import * as S from './style'
 
-const Home = () => {
+export default function Home() {
   return (
     <ContainerMain>
       <S.Container>HOME HERE!</S.Container>
     </ContainerMain>
   )
 }
-export default Home
