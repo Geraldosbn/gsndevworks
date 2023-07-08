@@ -1,5 +1,0 @@
-build: {
-  rollupOptions: {
-    external: ['./src/*']
-  }
-}
