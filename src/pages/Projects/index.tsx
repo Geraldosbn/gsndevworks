@@ -1,5 +1,5 @@
+import ContainerMain from '@src/components/ContainerMain'
 import * as S from './style'
-import ContainerMain from '../../components/ContainerMain'
 
 export default function Projects() {
   return (
