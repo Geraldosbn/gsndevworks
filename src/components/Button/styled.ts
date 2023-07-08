@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { ButtonProps } from '.'
+import { ButtonProps } from './Button'
 
 const fadeIn = keyframes`
   0% {

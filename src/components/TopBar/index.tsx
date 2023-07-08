@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import * as S from './style'
 import * as Icon from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
-import Button from '../Button'
+import Button from '../Button/Button'
 
 export default function TopBar() {
   const [open, setOpen] = useState<boolean>(false)
