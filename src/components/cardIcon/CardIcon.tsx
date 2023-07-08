@@ -1,8 +1,8 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import * as S from './styled'
 
 export interface CardIconProps {
-  icon: React.ReactNode
+  icon: ReactNode
   label?: string
 }
 

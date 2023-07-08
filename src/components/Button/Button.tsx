@@ -1,8 +1,9 @@
+import { ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as S from './styled'
 
 export interface ButtonProps {
-  label?: React.ReactNode
+  label?: ReactNode
   href?: string
   to?: string
   hoverText?: string

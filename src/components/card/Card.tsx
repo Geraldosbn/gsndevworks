@@ -1,8 +1,8 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import * as S from './style'
 
 interface CardProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function Card({ children }: CardProps) {

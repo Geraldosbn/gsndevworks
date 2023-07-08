@@ -1,9 +1,9 @@
-import React from 'react'
 import * as S from './style'
 import TopBar from '../TopBar'
+import { ReactNode } from 'react'
 
 interface ContainerAppProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function ContainerMain({ children }: ContainerAppProps) {
