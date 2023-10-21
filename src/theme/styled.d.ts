@@ -5,7 +5,8 @@ declare module 'styled-components' {
     colors: {
       primaryText: string
       secondaryText: string
-      background: string
+      primaryBackgroundColor: string
+      secondaryBackgroundColor: string
     }
     fontSize: {
       smaler: string

@@ -9,7 +9,7 @@ const fadeIn = keyframes`
   }
   100% {
     opacity: 1;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
 `
 
@@ -19,13 +19,13 @@ export const ContainerBtn = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: transparent;
+  background-color: inherit;
 
   p {
     display: none;
     position: absolute;
-    bottom: 0;
-    background-color: transparent;
+    bottom: 15;
+    background-color: inherit;
     font-size: ${({ theme }) => theme.fontSize.smaler};
     animation: ${fadeIn} 0.1s ease-in-out forwards;
     width: max-content;
@@ -41,6 +41,6 @@ export const ContainerBtn = styled.div`
 `
 export const ButtonStyle = styled.button<ButtonProps>`
   cursor: pointer;
-  background-color: transparent;
+  background-color: inherit;
   border: none;
 `

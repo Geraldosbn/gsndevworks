@@ -19,7 +19,9 @@ export default function Button({ label, href, to, hoverText }: ButtonProps) {
           href={href}
           target='_blank'
           rel='noreferrer'
-          style={{ backgroundColor: ' #1d2941' }}
+          style={{
+            backgroundColor: 'inherit'
+          }}
         >
           <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
         </a>

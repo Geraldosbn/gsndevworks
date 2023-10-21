@@ -1,22 +1,25 @@
 import styled from 'styled-components'
 
 export const Title = styled.h2`
-  color: #50bddb;
+  color: ${({ theme }) => theme.colors.secondaryText};
   margin-bottom: 10px;
-  background: transparent;
+  background: inherit;
 `
 
 export const WordBold = styled.span`
-  background: transparent;
+  background: inherit;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.secondaryText};
 `
 
 export const Content = styled.p`
   margin-bottom: 10px;
-  background: transparent;
+  background: inherit;
 
   @media screen and (min-width: 768px) {
     font-size: ${({ theme }) => theme.fontSize.small};
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: ${({ theme }) => theme.fontSize.medium};
   }
 `

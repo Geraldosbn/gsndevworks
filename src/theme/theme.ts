@@ -4,7 +4,8 @@ export const theme: DefaultTheme = {
   colors: {
     primaryText: '#dddddd',
     secondaryText: '#50bddb',
-    background: '#2d3442'
+    primaryBackgroundColor: '#2d3442',
+    secondaryBackgroundColor: '#4a505e'
   },
   fontSize: {
     smaler: '14px',
@@ -17,7 +18,7 @@ export const theme: DefaultTheme = {
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    background-color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.primaryBackgroundColor};
     color: ${({ theme }) => theme.colors.primaryText};
     font-family: ui-sans-serif, system-ui, sans-serif;
     margin: 0;

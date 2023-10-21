@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-  background-color: #475166;
   color: ${({ theme }) => theme.colors.secondaryText};
   padding: 20px;
   border-radius: 8px;
@@ -10,19 +9,19 @@ export const CardContainer = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `
 export const Title = styled.h2`
-  color: #50bddb;
+  color: ${({ theme }) => theme.colors.secondaryText};
   margin-bottom: 10px;
-  background: transparent;
+  background: inherit;
 `
 export const Company = styled.h4`
-  color: #50bddb;
+  color: ${({ theme }) => theme.colors.primaryText};
   margin-bottom: 10px;
-  background: transparent;
+  background: inherit;
 `
 export const Span = styled.span`
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSize.smaler};
-  background: transparent;
+  background: inherit;
 
   @media screen and (min-width: 720px) {
     font-size: ${({ theme }) => theme.fontSize.small};
@@ -31,7 +30,7 @@ export const Span = styled.span`
 export const Content = styled.p`
   font-size: ${({ theme }) => theme.fontSize.smaler};
   margin: 10px 0;
-  background: transparent;
+  background: inherit;
 
   @media screen and (min-width: 720px) {
     font-size: ${({ theme }) => theme.fontSize.small};
@@ -43,7 +42,7 @@ export const ContainerIcons = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: inherit;
   height: 150px;
   padding-bottom: 20px;
 

@@ -28,7 +28,9 @@ export default function TopBar() {
     {
       label: (
         <Icon.FaInfoCircle
-          style={{ backgroundColor: ' #1d2941' }}
+          style={{
+            backgroundColor: ' inherit'
+          }}
           size={size}
         />
       ),
@@ -38,7 +40,9 @@ export default function TopBar() {
     {
       label: (
         <Icon.FaProjectDiagram
-          style={{ backgroundColor: ' #1d2941' }}
+          style={{
+            backgroundColor: 'inherit'
+          }}
           size={size}
         />
       ),
@@ -47,21 +51,36 @@ export default function TopBar() {
     },
     {
       label: (
-        <Icon.FaPaperclip style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaPaperclip
+          style={{
+            backgroundColor: ' inherit'
+          }}
+          size={size}
+        />
       ),
       to: '/Resume',
       hoverText: 'Curriculo'
     },
     {
       label: (
-        <Icon.FaLinkedin style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaLinkedin
+          style={{
+            backgroundColor: 'inherit'
+          }}
+          size={size}
+        />
       ),
       link: 'https://www.linkedin.com/in/geraldo-b-a50629146/',
       hoverText: 'LinkedIn'
     },
     {
       label: (
-        <Icon.FaGithub style={{ backgroundColor: ' #1d2941' }} size={size} />
+        <Icon.FaGithub
+          style={{
+            backgroundColor: 'inherit'
+          }}
+          size={size}
+        />
       ),
       link: 'https://github.com/geraldosbn',
       hoverText: 'GitHub'
@@ -69,7 +88,9 @@ export default function TopBar() {
     {
       label: (
         <Icon.FaWhatsappSquare
-          style={{ backgroundColor: ' #1d2941' }}
+          style={{
+            backgroundColor: '  inherit'
+          }}
           size={size}
         />
       ),
@@ -86,28 +107,24 @@ export default function TopBar() {
     />
   ))
 
-  const handleOpenMsgDM = () => {
-    if (open) {
-      setOpen(false)
-    } else {
-      setOpen(true)
-    }
-  }
-
   return (
     <S.Container>
       <S.ContainerHeader>
-        <S.ContainerTools>
+        {/* //div provisória até colocar uma logo */}
+        <S.ContainerDarkMode style={{ width: '43px' }} />
+        <S.ContainerTitleAndSubTitle>
+          <S.Title onClick={() => navigate('/')}>
+            {'<GeraldoBarbosa />'}
+          </S.Title>
+          <S.SubTitle>{'<DevFrontend />'}</S.SubTitle>
+        </S.ContainerTitleAndSubTitle>
+        <S.ContainerDarkMode>
           <Button
             label={
               <Icon.FaSun
-                style={{
-                  backgroundColor: ' #1d2941',
-                  paddingTop: 15,
-                  paddingRight: 20
-                }}
+                style={{ backgroundColor: 'inherit', padding: '10px' }}
                 size={size}
-                onClick={handleOpenMsgDM}
+                onClick={() => setOpen(prevState => !prevState)}
               />
             }
           />
@@ -117,13 +134,7 @@ export default function TopBar() {
               todo mundo faz, o importante mesmo é resolver os seus problemas!
             </S.MsgDarkMode>
           )}
-        </S.ContainerTools>
-        <S.ContainerTitle onClick={() => navigate('/')}>
-          <S.Title>{'<GeraldoBarbosa />'}</S.Title>
-        </S.ContainerTitle>
-        <S.ContainerSubTitle>
-          <S.SubTitle>{'<DevFrontend />'}</S.SubTitle>
-        </S.ContainerSubTitle>
+        </S.ContainerDarkMode>
       </S.ContainerHeader>
       <S.ContainerNav>{actions}</S.ContainerNav>
     </S.Container>

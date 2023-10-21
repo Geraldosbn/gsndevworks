@@ -33,10 +33,7 @@ export default function Resume() {
       {
         label: 'React',
         icon: (
-          <Icon.SiReact
-            style={{ backgroundColor: 'transparent' }}
-            size={size}
-          />
+          <Icon.SiReact style={{ backgroundColor: 'inherit' }} size={size} />
         )
       },
       {
@@ -44,7 +41,7 @@ export default function Resume() {
         icon: (
           <Icon.SiTypescript
             size={size}
-            style={{ backgroundColor: 'transparent' }}
+            style={{ backgroundColor: 'inherit' }}
           />
         )
       },
@@ -53,17 +50,14 @@ export default function Resume() {
         icon: (
           <Icon.SiReactquery
             size={size}
-            style={{ backgroundColor: 'transparent' }}
+            style={{ backgroundColor: 'inherit' }}
           />
         )
       },
       {
         label: 'Redux',
         icon: (
-          <Icon.SiRedux
-            size={size}
-            style={{ backgroundColor: 'transparent' }}
-          />
+          <Icon.SiRedux size={size} style={{ backgroundColor: 'inherit' }} />
         )
       },
       {
@@ -71,7 +65,7 @@ export default function Resume() {
         icon: (
           <Icon.SiStyledcomponents
             size={size}
-            style={{ backgroundColor: 'transparent' }}
+            style={{ backgroundColor: 'inherit' }}
           />
         )
       }

@@ -1,70 +1,37 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+interface DivProps {
+  isCorrect?: boolean
+}
+
+export const Question = styled.div``
+export const Options = styled.div``
+
+export const Option = styled.div<DivProps>`
+  background-color: ${({ theme }) => theme.colors.secondaryBackgroundColor};
+  padding: 3px;
+  margin: 5px 5px 5px 0;
+  border-radius: 10px;
+
+  /* Aplicar cor verde quando a opção correta for selecionada */
+  ${({ isCorrect }) => isCorrect && `background-color: green; `}
+  /* ${({ isCorrect }) =>
+    isCorrect ? `background-color: green;` : `background-color: red;`} */
+
+  .label {
+    margin-left: 5px;
+    background-color: inherit;
   }
 `
-
-const moveIcon = keyframes`
-  0% {
-     transform: translateX(-50px);
-    }
-  12.5% {
-     transform: translate(50px, -20px);
-    }
-  25% {
-     transform: translate(-50px,-20px);
-    }
-  37.5% {
-     transform: translate(50px,20px);
-    }
-  50% {
-     transform: translate(-50px, 20px);
-    }
-  62.5% {
-     transform: translate(50px, -20px);
-    }
-  100% {
-     transform: translate(0);
-    }
-
-`
-
-export const ContentIcon = styled.div`
+export const DivBottom = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 5px;
-  background: transparent;
-  position: relative;
-
-  p {
-    display: none;
-    position: absolute;
-    bottom: -40px;
-    background-color: transparent;
-    width: max-content;
-    font-size: ${({ theme }) => theme.fontSize.smaler};
-    animation: ${fadeIn} 0.1s ease-in-out forwards;
-
-    @media screen and (min-width: 768px) {
-      bottom: -50px;
-      font-size: ${({ theme }) => theme.fontSize.medium};
-    }
-  }
-
-  &:hover p {
-    display: block;
-  }
-
-  &:hover svg {
-    animation: ${moveIcon} 2s alternate infinite;
-  }
+  justify-content: center;
+  width: 100%;
+`
+export const Button = styled.button`
+  padding: 5px;
+  margin-top: 5px;
+  transform: translateY(5px);
+  border-radius: 10px;
 `
