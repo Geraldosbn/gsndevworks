@@ -1,51 +1,59 @@
 import Card from '../../components/Card'
-import ContainerMain from '../../components/ContainerMain'
 import * as S from './style'
 
 export default function About() {
   return (
-    <ContainerMain>
-      <Card>
-        <S.Title>Oi,</S.Title>
-        <S.Content>
-          Sou um desenvolvedor Front-end focado no ecossistema
-          {<S.WordBold> React JS, TypeScript, React Query.</S.WordBold>} Minha
-          jornada no desenvolvimento web tem me levado a dominar as
-          funcionalidades do {<S.WordBold>React JS</S.WordBold>}, aproveitando
-          todo o seu potencial para criar interfaces interativas e responsivas.
-          Com o{<S.WordBold> TypeScript</S.WordBold>}, garanto um código robusto
-          e livre de erros, trazendo maior segurança e escalabilidade aos
-          projetos. Além disso, minha experiência com{' '}
-          {<S.WordBold>Redux e React Query</S.WordBold>} me permite gerenciar
-          eficientemente o estado da aplicação e otimizar as requisições de
-          dados.
-        </S.Content>
-        <S.Content>
-          Também possuo conhecimentos em manutenção de projetos React Native.
-        </S.Content>
-        <S.Content>
-          Minha abordagem combina um olhar atento aos detalhes técnicos com uma
-          visão orientada para a excelência, por exemplo, com a aplicação dos
-          princípios do {<S.WordBold>SOLID</S.WordBold>}, garantindo a entrega
-          de soluções de qualidade que superam as expectativas dos usuários.
-        </S.Content>
-        <S.Content>
-          Além disso, sou um entusiasta do trabalho em equipe, acreditando que a
-          colaboração e a troca de ideias são essenciais para o sucesso de um
-          projeto.
-        </S.Content>
-        <S.Content>
-          Tenho experiência em sistemas que atendem a milhares de usuários,
-          tanto intermediários quanto clientes finais, sempre priorizando a
-          usabilidade e a manutenibilidade do código que desenvolvo.
-        </S.Content>
-        <S.Content>
-          Se você está em busca de um desenvolvedor Front-end comprometido em
-          fornecer resultados excepcionais e impulsionar o sucesso do seu
-          projeto, estou pronto para fazer parte da sua equipe. Juntos, podemos
-          alcançar grandes conquistas no mundo da tecnologia!
-        </S.Content>
-      </Card>
-    </ContainerMain>
+    <Card>
+      <S.Container>
+        <S.Presentation>
+          <S.Title>Hi. My name</S.Title>
+          <S.UserName>Geraldo Barbosa</S.UserName>
+          <a
+            target='_blank'
+            href='https://wa.me/5527999235310?text=Ol%C3%A1%2C+dei+uma+olhada+no+seu+portf%C3%B3lio+e+achei+incr%C3%ADvel%21'
+          >
+            <S.Button> Contact me</S.Button>
+          </a>
+        </S.Presentation>
+        <S.Image
+          src='https://avatars.githubusercontent.com/u/81484642?v=4'
+          alt='Perfil'
+          width={170}
+        />
+      </S.Container>
+
+      <S.Content>
+        I'm a Front-end developer focused on the ecosystem
+        {<S.WordBold> React JS, TypeScript, React Query.</S.WordBold>} My
+        journey in web development has led me to master the features of{' '}
+        {<S.WordBold>React JS</S.WordBold>}, enjoying its full potential to
+        create interactive and responsive interfaces. As
+        {<S.WordBold> TypeScript</S.WordBold>}, guarantee a robust and
+        error-free, bringing greater security and scalability to projects.
+        Furthermore, my experience with
+        {<S.WordBold>Redux e React Query</S.WordBold>} allows me to manage
+        efficiently state the application and optimize data requests.
+      </S.Content>
+      <S.Content>
+        I also have knowledge in maintaining React Native projects.
+      </S.Content>
+      <S.Content>
+        My approach combines a keen eye for technical details with a vision
+        oriented towards excellence, for example, with the application of
+        principles of {<S.WordBold>SOLID</S.WordBold>}, ensuring delivery of
+        quality solutions that exceed user expectations.
+      </S.Content>
+      <S.Content>
+        I have experience in systems that serve thousands of users, both
+        intermediaries and end customers, always prioritizing usability and the
+        maintainability of the code I develop.
+      </S.Content>
+      <S.Content>
+        If you are looking for a Front-end developer committed to provide
+        exceptional results and drive the success of your project, I'm ready to
+        be part of your team. Together we can achieve great achievements in the
+        world of technology!
+      </S.Content>
+    </Card>
   )
 }

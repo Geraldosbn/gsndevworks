@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
-
-export const Title = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.medium};
-  background-color: inherit;
-  cursor: pointer;
-
-  @media screen and (min-width: 1024px) {
-    font-size: ${({ theme }) => theme.fontSize.large};
-  }
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+`
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 `

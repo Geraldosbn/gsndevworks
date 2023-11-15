@@ -12,47 +12,14 @@ const fadeIn = keyframes`
 `
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  height: 130px;
   background-color: ${({ theme }) => theme.colors.primaryBackgroundColor};
   border-bottom: ${({ theme }) => `1px solid ${theme.colors.primaryText}`};
+`
 
-  @media screen and (min-width: 1024px) {
-    height: 140px;
-  }
-`
-export const ContainerHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 10px;
-  background-color: inherit;
-`
-export const ContainerTitleAndSubTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: inherit;
-`
-export const Title = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.medium};
-  background-color: inherit;
-  cursor: pointer;
-
-  @media screen and (min-width: 1024px) {
-    font-size: ${({ theme }) => theme.fontSize.large};
-  }
-`
-export const SubTitle = styled.p`
-  color: ${({ theme }) => theme.colors.primaryText};
-  font-size: ${({ theme }) => theme.fontSize.small};
-  background-color: inherit;
-`
 export const ContainerDarkMode = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -88,5 +55,8 @@ export const ContainerNav = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 50%;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 20%;
   }
 `

@@ -4,8 +4,8 @@ export const theme: DefaultTheme = {
   colors: {
     primaryText: '#dddddd',
     secondaryText: '#50bddb',
-    primaryBackgroundColor: '#2d3442',
-    secondaryBackgroundColor: '#4a505e'
+    primaryBackgroundColor: '#020817',
+    secondaryBackgroundColor: '#182334'
   },
   fontSize: {
     smaler: '14px',
