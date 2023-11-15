@@ -3,12 +3,19 @@ import * as S from './style'
 import { FaSun } from 'react-icons/fa'
 import Button from '../Button'
 import { actions } from './actions'
+import { useNavigate } from 'react-router-dom'
 
 export default function TopBar() {
   const [open, setOpen] = useState<boolean>(false)
+  const navigate = useNavigate()
 
   const actionLinks = actions.map(({ label, to, href }, index) => (
-    <Button key={index} label={label} to={to} href={href} />
+    <Button
+      key={index}
+      children={label}
+      onClick={() => navigate(to ?? '')}
+      href={href}
+    />
   ))
 
   return (
@@ -16,7 +23,7 @@ export default function TopBar() {
       <S.ContainerNav>{actionLinks}</S.ContainerNav>
       <S.ContainerDarkMode>
         <Button
-          label={
+          children={
             <FaSun
               style={{ backgroundColor: 'inherit', padding: '10px' }}
               size={20}

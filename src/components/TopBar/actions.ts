@@ -6,7 +6,7 @@ export interface Actions {
 
 export const actions: Actions[] = [
   {
-    label: 'About me',
+    label: 'About',
     to: '/'
   },
   {

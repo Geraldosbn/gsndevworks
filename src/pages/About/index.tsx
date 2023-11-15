@@ -18,7 +18,7 @@ export default function About() {
         <S.Image
           src='https://avatars.githubusercontent.com/u/81484642?v=4'
           alt='Perfil'
-          width={170}
+          width={240}
         />
       </S.Container>
 

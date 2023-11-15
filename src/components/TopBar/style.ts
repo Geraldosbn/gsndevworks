@@ -49,7 +49,7 @@ export const ContainerNav = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 1000px;
   margin: 10px;
   background-color: inherit;
 

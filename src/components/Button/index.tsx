@@ -1,23 +1,20 @@
 import { ReactNode } from 'react'
-import { useNavigate } from 'react-router-dom'
 import * as S from './styled'
 
 export interface ButtonProps {
-  label?: ReactNode
+  children?: ReactNode
   href?: string
-  to?: string
+  onClick?: () => void
 }
 
-export default function Button({ label, href, to }: ButtonProps) {
-  const navigate = useNavigate()
-
+export default function Button({ children, href, onClick }: ButtonProps) {
   if (href) {
     return (
-      <a href={href} target='_blank' rel='noreferrer'>
-        <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
+      <a style={{ width: '100%' }} href={href} target='_blank' rel='noreferrer'>
+        <S.ButtonStyle children={children} onClick={onClick} />
       </a>
     )
   } else {
-    return <S.ButtonStyle children={label} onClick={() => navigate(to ?? '')} />
+    return <S.ButtonStyle children={children} onClick={onClick} />
   }
 }
