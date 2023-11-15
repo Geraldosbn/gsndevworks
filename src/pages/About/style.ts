@@ -31,6 +31,9 @@ export const Container = styled.div`
   gap: 2rem;
   background-color: inherit;
   animation: ${fadeInRight} 0.5s ease-in-out;
+  @media (max-width: 425px) {
+    flex-direction: column-reverse;
+  }
 `
 export const Presentation = styled.div`
   display: flex;
@@ -38,6 +41,9 @@ export const Presentation = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: inherit;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `
 
 export const Title = styled.span`
@@ -48,8 +54,10 @@ export const Title = styled.span`
 
 export const UserName = styled.h2`
   background-color: inherit;
-  font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
+  @media (max-width: 320px) {
+    font-size: 1.5rem;
+  }
 `
 
 export const Button = styled.button`

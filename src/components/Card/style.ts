@@ -11,7 +11,8 @@ export const Container = styled.div`
   border-radius: 8px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
   background-color: ${({ theme }) => theme.colors.secondaryBackgroundColor};
-  @media screen and (min-width: 1024px) {
-    max-width: 40%;
+
+  @media screen and (min-width: 1440px) {
+    width: 70%;
   }
 `
