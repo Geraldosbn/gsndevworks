@@ -25,7 +25,7 @@ export default function About() {
       <S.Content>
         I'm a Front-end developer focused on the ecosystem
         {<S.WordBold> React JS, TypeScript, React Query.</S.WordBold>} My
-        journey in web development has led me to master the features of{' '}
+        journey in web development has led me to master the features of
         {<S.WordBold> React JS</S.WordBold>}, enjoying its full potential to
         create interactive and responsive interfaces. As
         {<S.WordBold> TypeScript</S.WordBold>}, guarantee a robust and

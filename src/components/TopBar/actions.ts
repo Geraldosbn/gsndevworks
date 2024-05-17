@@ -6,7 +6,7 @@ export interface Actions {
 
 export const actions: Actions[] = [
   {
-    label: 'About',
+    label: 'Abouts',
     to: '/'
   },
   {
@@ -19,6 +19,10 @@ export const actions: Actions[] = [
   },
   {
     label: 'GitHub',
+    href: 'https://github.com/geraldosbn'
+  },
+  {
+    label: 'EXEMPLO',
     href: 'https://github.com/geraldosbn'
   }
 ]
